@@ -16,7 +16,6 @@ import PermissionGuard from "@/components/commons/guard/PermissionGuard";
 import { PERMISSION_ROLE } from "@/constants/role";
 import { getSummary } from "@/services/concert/summary";
 import { getAxiosError } from "@/utils/error";
-import { set } from "zod";
 import { ConcertSummaryDTO } from "@/model/concert.dto";
 
 export default function HomePage() {
@@ -30,6 +29,9 @@ export default function HomePage() {
   };
 
   const fetchSummary = async () => {
+    if (!userRole || userRole === "user") {
+      return;
+    }
     try {
       const data = await getSummary();
       setSummary(data);
@@ -41,8 +43,11 @@ export default function HomePage() {
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setUserRole(getUserInfo().role);
-    fetchSummary();
   }, []);
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    fetchSummary();
+  }, [userRole]);
 
   const items: TabsProps["items"] = [
     {
