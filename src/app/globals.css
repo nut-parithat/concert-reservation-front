@@ -1,0 +1,28 @@
+
+
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Custom color variables */
+  --color-primary: #0070A4;
+  --color-success: #00A58B;
+  --color-error: #F96464;
+  --color-text: #1692EC;
+  --color-neutral: #EBEBEB;
+
+  --color-blue-100:#EAF5F9;
+
+}
+
+
+
+
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}

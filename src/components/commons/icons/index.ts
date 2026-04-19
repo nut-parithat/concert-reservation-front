@@ -1,0 +1,12 @@
+"use client";
+export { default as UserIcon } from "@/assets/icons/3p.svg";
+export { default as ManageAccountsIcon } from "@/assets/icons/manage_accounts.svg";
+export { default as UserFormIcon } from "@/assets/icons/user.svg";
+export { default as VisibilityOffIcon } from "@/assets/icons/visibility_off.svg";
+export { default as LockIcon } from "@/assets/icons/lock.svg";
+export { default as ArrowForwardIcon } from "@/assets/icons/arrow_forward.svg";
+export { default as LogoutIcon } from "@/assets/icons/logout.svg";
+export { default as XCircleIcon } from "@/assets/icons/xcircle.svg";
+export { default as AwardIcon } from "@/assets/icons/award.svg";
+export { default as SaveIcon } from "@/assets/icons/save.svg";
+export { default as TrashIcon } from "@/assets/icons/trash.svg";
