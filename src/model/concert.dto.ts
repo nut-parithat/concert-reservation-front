@@ -7,6 +7,7 @@ export interface ConcertDTO {
   cancelledSeat: number;
   createdAt: string;
   createdBy: string;
+  isReserved: boolean;
 }
 
 export interface CreateConcertRequestDTO {

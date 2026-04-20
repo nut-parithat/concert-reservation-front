@@ -32,7 +32,8 @@ const ConcertList = ({
           description={concert.description}
           totalSeats={concert.totalSeat}
           role={role}
-          isReserved={concert.reservedSeat > 0}
+          disableReserve={concert.totalSeat === concert.reservedSeat}
+          isReserved={concert.isReserved}
           onDelete={() => onDelete?.(concert.id)}
           onReserve={() => onReserve?.(concert.id)}
           onCancel={() => onCancel?.(concert.id)}

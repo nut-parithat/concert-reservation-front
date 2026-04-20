@@ -8,7 +8,8 @@ type Props = {
   description: string;
   totalSeats: number;
   role: "admin" | "user";
-  isReserved?: boolean;
+  isReserved: boolean;
+  disableReserve: boolean;
   onDelete?: () => void;
   onReserve?: () => void;
   onCancel?: () => void;
@@ -20,6 +21,7 @@ export default function ConcertCard({
   totalSeats,
   role,
   isReserved = false,
+  disableReserve,
   onDelete,
   onReserve,
   onCancel,
@@ -68,7 +70,7 @@ export default function ConcertCard({
           userRole={role}
           permissionRole={[PERMISSION_ROLE.USER]}
         >
-          {!isReserved && (
+          {!isReserved && !disableReserve && (
             <Button variant="primary" onClick={onReserve} className="bg-text">
               Reserve
             </Button>
